@@ -4,7 +4,7 @@
 		{
 			"type": "cppbuild",
 			"label": "C/C++单源: clang++",
-			"command": "/usr/bin/clang++",
+			"command": "C:/Program Files/Msys2/usr/bin/clang++.exe",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
@@ -22,12 +22,12 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "编译器: /usr/bin/clang++"
+			"detail": "编译器: C:/Program Files/Msys2/usr/bin/clang++.exe"
 		},
 		{
 			"type": "cppbuild",
 			"label": "C/C++多源: clang++",
-			"command": "/usr/bin/clang++",
+			"command": "C:/Program Files/Msys2/usr/bin/clang++.exe",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
@@ -45,7 +45,7 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "编译器: /usr/bin/clang++"
+			"detail": "编译器: C:/Program Files/Msys2/usr/bin/clang++.exe"
 		}
 	]
 }
