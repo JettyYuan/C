@@ -22,3 +22,11 @@ vector<typename> vt(n_elem)
 
 模板类array创建arr对象
 array<typename, n_elem> arr
+
+cstring头文件
+
+string头文件
+
+vector头文件
+
+array头文件
