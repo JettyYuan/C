@@ -1,5 +1,6 @@
-如果将sizeof运算符用于数组名，得到的将是整个数组中的字节数
-如果将sizeof用于数组元素，得到的将是元素的长度
+# chapter4
+
+如果将sizeof运算符用于数组名，得到的将是整个数组中的字节数；如果将sizeof用于数组元素，得到的将是元素的长度
 
 在确定存储字符串所需的最短数组时，要将结尾的空字符('\0')计算在内
 
@@ -18,10 +19,10 @@ C++将数组名解释为地址并视其为第1个元素的地址
 模板类vector类似于string类，是一种动态数组
 
 vector创建vt对象
-vector<typename> vt(n_elem)
+vector< typename > vt(n_elem)
 
 模板类array创建arr对象
-array<typename, n_elem> arr
+array< typename, n_elem > arr
 
 cstring头文件
 
