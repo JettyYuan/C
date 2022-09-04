@@ -3,40 +3,17 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++单源: clang++",
-			"command": "C:/Program Files/Msys2/usr/bin/clang++.exe",
-			"args": [
-				"-fdiagnostics-color=always",
-				"-g",
-				"${fileDirname}/${fileBasename}",
-				"-o",
-				"${workspaceFolder}/${fileBasenameNoExtension}"
-			],
-			"options": {
-				"cwd": "${fileDirname}"
-			},
-			"problemMatcher": [
-				"$gcc"
-			],
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-			"detail": "编译器: C:/Program Files/Msys2/usr/bin/clang++.exe"
-		},
-		{
-			"type": "cppbuild",
-			"label": "C/C++多源: clang++",
-			"command": "C:/Program Files/Msys2/usr/bin/clang++.exe",
+			"label": "C/C++: g++.exe",
+			"command": "C:/Program Files/Msys2/mingw64/bin/g++.exe",
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
 				"${fileDirname}/*.cpp",
 				"-o",
-				"${workspaceFolder}/${fileBasenameNoExtension}"
+				"${workspaceFolder}/${relativeFileDirname}.exe"
 			],
 			"options": {
-				"cwd": "${fileDirname}"
+				"cwd": "C:/Program Files/Msys2/mingw64/bin"
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -45,7 +22,7 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "编译器: C:/Program Files/Msys2/usr/bin/clang++.exe"
+			"detail": "编译器: \"C:/Program Files/Msys2/mingw64/bin/g++.exe\""
 		}
 	]
 }

@@ -5,11 +5,15 @@
             "includePath": [
                 "${workspaceFolder}/**"
             ],
-            "defines": [],
-            "compilerPath": "C:/Program Files/Msys2/usr/bin/clang++.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "windows-clang-x64"
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:/Program Files/Msys2/mingw64/bin/g++.exe",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "windows-gcc-x64"
         }
     ],
     "version": 4

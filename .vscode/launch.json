@@ -5,36 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "preLaunchTask": "C/C++单源: clang++",
-            "name": "gdb:单源文件",
+            "preLaunchTask": "C/C++: g++.exe",
+            "name": "gdb",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "为 gdb 启用整齐打印",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description":  "将反汇编风格设置为 Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ]
-        },
-        {
-            "preLaunchTask": "C/C++多源: clang++",
-            "name": "gdb:多源文件",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/${fileBasenameNoExtension}",
+            "program": "${workspaceFolder}/${relativeFileDirname}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -42,6 +17,7 @@
             "externalConsole": false,
             "internalConsoleOptions": "neverOpen",
             "MIMode": "gdb",
+            "miDebuggerPath": "C:/Program Files/Msys2/mingw64/bin/gdb.exe",
             "setupCommands": [
                 {
                     "description": "为 gdb 启用整齐打印",
@@ -56,21 +32,11 @@
             ]
         },
         {
-            "preLaunchTask": "C/C++单源: clang++",
+            "preLaunchTask": "C/C++: g++.exe",
             "type": "lldb",
             "request": "launch",
-            "name": "lldb:单源文件",
-            "program": "${workspaceFolder}/${fileBasenameNoExtension}",
-            "args": [],
-            "cwd": "${workspaceFolder}",
-            "terminal": "integrated"
-        },
-        {
-            "preLaunchTask": "C/C++多源: clang++",
-            "type": "lldb",
-            "request": "launch",
-            "name": "lldb:多源文件",
-            "program": "${workspaceFolder}/${fileBasenameNoExtension}",
+            "name": "lldb",
+            "program": "${workspaceFolder}/${relativeFileDirname}.exe",
             "args": [],
             "cwd": "${workspaceFolder}",
             "terminal": "integrated"
