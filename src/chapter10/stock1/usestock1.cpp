@@ -22,6 +22,7 @@ int main()
         stock1.show();
         stock2.show();
         cout << "Using a constructor to reset an object\n";
+        // 使用构造函数重置变量会使原来变量释放并调用其更改过后的析构函数
         stock1 = Stock("Nifty Foods", 10, 50.0);
         cout << "Revised stock1:\n";
         stock1.show();
