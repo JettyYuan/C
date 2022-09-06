@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "preLaunchTask": "C/C++: g++.exe",
+            "preLaunchTask": "C/C++: g++.exe 生成活动文件",
             "name": "gdb",
             "type": "cppdbg",
             "request": "launch",
@@ -32,14 +32,13 @@
             ]
         },
         {
-            "preLaunchTask": "C/C++: g++.exe",
+            "preLaunchTask": "C/C++: g++.exe 生成活动文件",
             "type": "lldb",
             "request": "launch",
             "name": "lldb",
             "program": "${workspaceFolder}/${relativeFileDirname}.exe",
             "args": [],
-            "cwd": "${workspaceFolder}",
-            "terminal": "integrated"
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
