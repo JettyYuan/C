@@ -9,3 +9,5 @@ cctype头文件
 fstream头文件
 
 cstdlib头文件
+
+switch语句的参数只能是整数量，比如char、int、常规枚举等
