@@ -3,6 +3,8 @@
         "iostream": "cpp",
         "cctype": "cpp",
         "string": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "istream": "cpp",
+        "streambuf": "cpp"
     }
 }
