@@ -8,6 +8,8 @@ sizeof运算符返回类型或变量的长度，单位为**字节**
 
 ### 优先级和结合性
 
+<http://www.cppds.com/cpp/language/operator_precedence.html>
+
 ## 控制符
 
 控制符dec、hex和oct用于指示cout以十进制、十六进制和八进制格式显示整数
@@ -51,7 +53,7 @@ cout.put()函数显示**一个字符**
 
 float型后缀为F或f long double型后缀为L或l
 
-E表示法：适合于非常大和非常小的浮点数；数字中不能有空格
+E表示法：适合于非常大和非常小的浮点数；**数字中不能有空格**
 
 将浮点型转换为整型，C++采取**截取整数部分**而不是四舍五入的方式
 
@@ -61,13 +63,15 @@ E表示法：适合于非常大和非常小的浮点数；数字中不能有空�
 
 ## 关键字auto
 
-使用关键字auto，编译器将把变量的类型设置成与初始值相同
+使用关键字auto，编译器将把变量的类型设置成与**初始值**相同
 
 ## 头文件
 
 ### iostream
 
 输入/输出库的一部分
+
+[iostream](http://www.cppds.com/cpp/header/iostream.html)
 
 ```c++
 #include <ios>
@@ -91,6 +95,8 @@ namespace std {
 ### climits
 
 类型支持库的一部分，C数值极限接口的一部分
+
+[climits](http://www.cppds.com/cpp/header/climits.html)
 
 ```c++
 #define CHAR_BIT // char 的位数
