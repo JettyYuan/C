@@ -10,9 +10,9 @@
 class complex {
 private:
     // 实数
-    double real{};
+    double real = 0.0;
     // 虚数
-    double imag{};
+    double imag = 0.0;
 public:
     complex();
     complex(double real, double imag);
