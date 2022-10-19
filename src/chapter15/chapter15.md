@@ -20,6 +20,18 @@
 
 **栈解退**机制，记录try代码块每条执行语句的地址以栈数据形式存放，在遇到异常时，按栈的释放规则释放语句中可能存在的动态变量与对象后跳转到try语句结尾
 
+如果有一个异常类继承层次结构，应这样排列catch块：将捕获位于层次结构最下面的异常类的catch语句放在最前面，将捕获基类异常的catch语句放在最后面
+
+如果想要捕获**任何异常**，可以将catch的参数列表设为...
+
+exception头文件定义了exception类，作为其他异常类的基类，有一个what()的虚拟成员函数，返回一个字符串
+
+stdexcept头文件定义了其他基于exception的异常类，logic_error和runtime_error就是基于exception，它们是头文件中其他异常的基类
+
+在有new导致的异常，可以在new后面加上(std::nothrow)使其发生异常时返回的是空指针**而不是**一个字符串
+
+正确的异常捕获与处理可以帮助用户使用程序，程序的完善程度也更高
+
 ## 头文件
 
 ### cfloat
@@ -27,3 +39,15 @@
 类型支持库的一部分，特别是C数值极限接口的一部分
 
 [cfloat](http://www.cppds.com/cpp/header/cfloat.html)
+
+### exception
+
+错误处理库的一部分
+
+[exception](http://www.cppds.com/cpp/header/exception.html)
+
+### stdexcept
+
+错误处理库的一部分
+
+[stdexcept](http://www.cppds.com/cpp/header/stdexcept.html)
