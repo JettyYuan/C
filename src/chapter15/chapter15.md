@@ -32,6 +32,21 @@ stdexcept头文件定义了其他基于exception的异常类，logic_error和run
 
 正确的异常捕获与处理可以帮助用户使用程序，程序的完善程度也更高
 
+## RTTI
+
+RTTI**只适用**于包含虚函数的类
+
+dynamic_cast运算符是RTTI的组件，用于检测对象是否可以安全的转换为其他的类对象，若能，则将对象先转换为目标类再赋值给变量，不能则返回空指针
+
+typeid运算符使得能够确定两个对象**是否**为同种类型，返回一个对type_info类对象的引用
+
+## 类型转换运算符
+
+- dynamic_cast运算符，dynamic_cast <type-name> (expression)在类层次结构**向上**转换
+- const_cast运算符，const_cast <type-name> (expression)将const或volatile标识的变量转换
+- static_cast运算符，static_cast <type-name> (expression)在类层次结构**相互**转换
+- reinterpret_cast运算符，reinterpret_cast <type-name> (expression)特殊使用
+
 ## 头文件
 
 ### cfloat
@@ -51,3 +66,9 @@ stdexcept头文件定义了其他基于exception的异常类，logic_error和run
 错误处理库的一部分
 
 [stdexcept](http://www.cppds.com/cpp/header/stdexcept.html)
+
+### typeinfo
+
+类型支持库的一部分
+
+[typeinfo](http://www.cppds.com/cpp/header/typeinfo.html)
