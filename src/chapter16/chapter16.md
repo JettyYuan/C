@@ -36,6 +36,35 @@ unique_ptr采用**所有权模型**，它不允许将相同的地址赋给多个
 
 基于范围的for循环也是为STL设计的，但它可以通过引用参数修改容器的内容
 
+## 泛型编程
+
+泛型编程旨在编写独立于数据类型的代码
+
+常规指针就能满足迭代器的要求，所以如果有函数的参数是迭代器，则可以直接使用指针作为参数
+
+C++将operator++作为前缀版本，将operator++(int)作为后缀版本
+
+| 迭代器功能    | 输入  | 输出  | 正向  | 双向  | 随机访问 |
+|----------|-----|-----|-----|-----|------|
+| 解除引用读取   | T   | F   | T   | T   | T    |
+| 解除引用写入   | F   | T   | T   | T   | T    |
+| 固定和可重复排序 | F   | F   | T   | T   | T    |
+| ++i i++  | T   | T   | T   | T   | T    |
+| --i i--  | F   | F   | F   | T   | T    |
+| i[n]     | F   | F   | F   | F   | T    |
+| i+n      | F   | F   | F   | F   | T    |
+| i-n      | F   | F   | F   | F   | T    |
+| i+=n     | F   | F   | F   | F   | T    |
+| i-=n     | F   | F   | F   | F   | T    |
+
+矢量迭代器是随机访问迭代器，指针满足所有的迭代器要求
+
+预定义迭代器，迭代器概念的**模型**，适配器；例如ostream_iterator就是输出迭代器概念的模型，这些适配器需要包含头文件iterator才可以使用
+
+vector类的特殊功能函数rbegin()和rend()，它们返回与begin()和end()相反的迭代器，对它们执行递增操作导致其递减
+
+rbegin()和rend()的返回值就是begin()和end()的返回值的反向指针，反向指针**先递减**，才会解除引用
+
 ## 头文件
 
 ### memory
@@ -49,3 +78,9 @@ unique_ptr采用**所有权模型**，它不允许将相同的地址赋给多个
 算法库的一部分
 
 [algorithm](http://www.cppds.com/cpp/header/algorithm.html)
+
+### iterator
+
+迭代器库的一部分
+
+[iterator](http://www.cppds.com/cpp/header/iterator.html)
