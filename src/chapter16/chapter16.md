@@ -152,6 +152,8 @@ STL的关联容器：set、multiset、map、multimap，前两者类似存放在s
 
 函数符就是自定义类且提供了重载的()
 
+transform()函数就是利用预定义的函数符操作的
+
 运算符和相应的函数符
 
 | 运算符 | 相应的函数符        |
@@ -173,6 +175,19 @@ STL的关联容器：set、multiset、map、multimap，前两者类似存放在s
 | !   | logical_not   |
 
 可以使用binder1st和binder2nd类将自适应二元函数**转换**为自适应一元函数，它们都有各自的助手函数，分别为bind1st()和bind2nd()函数
+
+## 算法
+
+STL的四组算法库
+
+- 非修改式序列操作 对区间内每个元素进行操作，但不做修改
+- 修改式序列操作 对区间内每个元素进行操作，但可以修改，甚至可以修改排序顺序
+- 排序和相关操作 一些排序函数以及其他函数
+- 通用数字运算 关于数字操作的函数
+
+new_permutation()函数搭配循环对**已排序**的字符串列出所有除自己本身外的可能排序
+
+模板initializer_list类似于模板类等，用于容器类，但它的迭代器类型是const，所以不能修改它存放的值
 
 ## 头文件
 
@@ -241,3 +256,21 @@ STL的关联容器：set、multiset、map、multimap，前两者类似存放在s
 函数对象库的一部分并提供标准散列函数
 
 [functional](http://www.cppds.com/cpp/header/functional.html)
+
+### numeric
+
+数值库的一部分
+
+[numeric](http://www.cppds.com/cpp/header/numeric.html)
+
+### complex
+
+数值库的一部分
+
+[complex](http://www.cppds.com/cpp/header/complex.html)
+
+### initializer_list
+
+工具库的一部分
+
+[initializer_list](http://www.cppds.com/cpp/header/initializer_list.html)
