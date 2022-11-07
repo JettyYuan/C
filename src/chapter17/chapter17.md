@@ -104,6 +104,54 @@ get(char *, int)在没有读取到字符时设置failbit
 - gcount()函数返回最后一个非格式化抽取方法读取的字符，即不是用抽取运算符>>读取的字符
 - putback()函数将一个字符插入到输入字符串中，被插入的字符将是下一条输入语句读取的第一个字符
 
+## 文件输入输出
+
+open()函数连接文件
+
+close()函数关闭连接
+
+c_str()函数将string对象转换为C风格字符串
+
+is_open()方法检查文件是否被打开
+
+创建文件流对象并连接文件，可以有第二个参数，即文件模式常量，ifstream和ofstream对象提供了默认值，而fstream没有
+
+文件模式常量
+
+| 常量               | 含义           |
+|------------------|--------------|
+| ios_base::in     | 打开文件，以便读取    |
+| ios_base::out    | 打开文件，以便写入    |
+| ios_base::ate    | 打开文件，并移到文件尾  |
+| ios_base::app    | 追加到文件尾       |
+| ios_base::trunc  | 如果文件存在，则截短文件 |
+| ios_base::binary | 二进制文件        |
+
+使用write()函数以**二进制格式**存储数据，第一个参数必须是指向char的指针，第二个参数是要复制的字符个数
+
+与write()函数类似的read()函数用于从文件读取信息存放到指定地址
+
+fstream类有两个方法（事实上是缓冲区中的位置）
+
+- seekg()，将输入指针移到指定的文件位置
+- seekp()，将输出指针移到指定的文件位置
+
+它们都有两个版本，接受一个参数或接受两个参数，其中两个参数的第二参数有三个常量可以选择，第一个参数就是**以字节为单位**的偏移量
+
+- ios_base::beg 相对于文件开始
+- ios_base::cur 相对于当前位置
+- ios_base::end 相对于文件尾
+
+一个参数的版本，其参数是绝对值，相对于文件开始，**以字节为单位**，开始位置编号为0
+
+输入流使用tellg()，输出流使用tellp()获取当前指针位置的编号
+
+cstdio头文件中有tmpnam_s()函数可以为临时文件命名，常量L_tmpnam限制文件名包含的字符数，TMP_MAX则是在不重复命名的情况下tmpnam_s()可调用次数
+
+ostringstream类有一个str()函数用于将sstream对象输出的内容保存在一个string对象中
+
+istringstream类有一个instr()函数可以从string对象获取字符作为输入使用，比如string对象中都是数字，就可以赋值给数字类型
+
 ## 头文件
 
 ### cstdio
@@ -117,3 +165,9 @@ C 风格输入/输出库的一部分
 输入/输出库的一部分
 
 [iomanip](http://www.cppds.com/cpp/header/iomanip.html)
+
+### sstream
+
+输入/输出库的一部分
+
+[sstream](http://www.cppds.com/cpp/header/sstream.html)
